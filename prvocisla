@@ -1,0 +1,22 @@
+"""Zadané kladné celé číslo rozloží na součin prvočísel."""
+
+
+def RozkladNaPrvocisla(n):
+    print("{} - rozklad na prvočísla:\t".format(n), end=" ")
+    i = 2
+    while n > 1:
+        if n % i == 0:          # %zbytek po dělení
+            print(i, end=" ")
+            n = n // i          # //celočíselný podíl
+        else:
+            i = i + 1
+    print()                     # vynechat řádek po vypsaných prvočíslech
+
+
+#výpis prvočísel
+
+k = int(input("Zadejte kladné celé číslo, jež rozložíme na prvočísla: "))
+
+#možná kontrola
+#for k in [98, 99, 101, 102, 998, 999, 1001, 1002]:
+#    RozkladNaPrvocisla(k)
