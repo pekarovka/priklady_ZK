@@ -16,6 +16,8 @@ def RozkladNaPrvocisla(n):
 #výpis prvočísel
 
 k = int(input("Zadejte kladné celé číslo, jež rozložíme na prvočísla: "))
+RozkladNaPrvocisla(k)
+
 
 #možná kontrola
 #for k in [98, 99, 101, 102, 998, 999, 1001, 1002]:
