@@ -1,8 +1,12 @@
 """Ze vstupního souboru zjistí počet samohlásek a souhlásek."""
 
+try:
+    with open("text.txt", "r", encoding="utf-8") as f:
+        obsah = f.read()
+except(FileNotFoundError):
+    print("Vstupní soubor neexistuje")
+    exit(1)
 
-with open("text.txt", "r", encoding="utf-8") as f:
-    obsah = f.read()
 
 #převod na malá písmena pro jednodušší počítání
 text = obsah.lower()
