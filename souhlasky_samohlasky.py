@@ -1,3 +1,5 @@
+"""Ze vstupního souboru zjistí počet samohlásek a souhlásek."""
+
 
 with open("text.txt", "r", encoding="utf-8") as f:
     obsah = f.read()
@@ -5,8 +7,6 @@ with open("text.txt", "r", encoding="utf-8") as f:
 #převod na malá písmena pro jednodušší počítání
 text = obsah.lower()
 
-#možnost vypsání textu ze souboru
-#print(text)
 
 #seznam samohlasek
 samohlasky = ["a", "e", "i", "o", "u", "y", "á", "é", "ě", "í", "ó", "ú", "ů", "ý"]
@@ -21,7 +21,7 @@ print("Počet samohlásek je: ", sam)
 
 
 #seznam souhlasek
-souhlasky = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z", "č", "ď", "ň", "ř", "š", "ť", "ž"]
+souhlasky = ["b", "c", "d", "f", "g", "h", "ch", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "z", "č", "ď", "ň", "ř", "š", "ť", "ž"]
 souh = 0
 
 #výpočet počtu souhlásek v textu
@@ -30,4 +30,3 @@ for i in text:
         souh = souh + 1
 
 print("Počet souhlásek je: ", souh)
-
